@@ -1,0 +1,7 @@
+C:\Users\micha\Documents\github\rmopo\Src\rmopo\rmopo\bin\Release\rmopo.exe.config
+C:\Users\micha\Documents\github\rmopo\Src\rmopo\rmopo\bin\Release\rmopo.exe
+C:\Users\micha\Documents\github\rmopo\Src\rmopo\rmopo\bin\Release\rmopo.pdb
+C:\Users\micha\Documents\github\rmopo\Src\rmopo\rmopo\obj\Release\rmopo.csproj.AssemblyReference.cache
+C:\Users\micha\Documents\github\rmopo\Src\rmopo\rmopo\obj\Release\rmopo.csproj.CoreCompileInputs.cache
+C:\Users\micha\Documents\github\rmopo\Src\rmopo\rmopo\obj\Release\rmopo.exe
+C:\Users\micha\Documents\github\rmopo\Src\rmopo\rmopo\obj\Release\rmopo.pdb
