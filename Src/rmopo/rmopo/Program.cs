@@ -1,19 +1,51 @@
-﻿using System;
+﻿using KeyboardInputsAPI;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace rmopo
 {
     internal class Program
     {
+        [DllImport("user32.dll")]
+        private static extern IntPtr GetForegroundWindow();
+        [DllImport("user32.dll", SetLastError = true)]
+        static extern uint GetWindowThreadProcessId(IntPtr hWnd, out uint lpdwProcessId);
         static string pathpaste = "", pathcopy = "";
         static Dictionary<string, string> filespaste = new Dictionary<string, string>(), filescopy = new Dictionary<string, string>();
+        public static uint getForegroundProcessPid()
+        {
+            uint processID = 0;
+            IntPtr hWnd = GetForegroundWindow();
+            GetWindowThreadProcessId(hWnd, out processID);
+            return processID;
+        }
+        public static void OnKeyDown()
+        {
+            KeyboardInput ki = new KeyboardInput();
+            ki.Scan();
+            ki.BeginPolling();
+            while (true)
+            {
+                if (ki.KeyboardKeyF1 & getForegroundProcessPid() == Process.GetCurrentProcess().Id)
+                {
+                    const string message = "• Author: Michaël André Franiatte.\n\r\n\r• Contact: michael.franiatte@gmail.com.\n\r\n\r• Publisher: https://github.com/michaelandrefraniatte.\n\r\n\r• Copyrights: All rights reserved, no permissions granted.\n\r\n\r• License: Not open source, not free of charge to use.";
+                    const string caption = "About";
+                    MessageBox.Show(message, caption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                System.Threading.Thread.Sleep(60);
+            }
+        }
         static void Main(string[] args)
         {
+            Task.Run(() => { OnKeyDown(); });
             Console.WriteLine("Actual folder path here for paste:");
             Console.WriteLine(pathpaste = System.Windows.Forms.Application.StartupPath);
             Console.WriteLine("Enter a folder path to copy here:");

@@ -5,3 +5,8 @@ C:\Users\micha\Documents\github\rmopo\Src\rmopo\rmopo\obj\Release\rmopo.csproj.A
 C:\Users\micha\Documents\github\rmopo\Src\rmopo\rmopo\obj\Release\rmopo.csproj.CoreCompileInputs.cache
 C:\Users\micha\Documents\github\rmopo\Src\rmopo\rmopo\obj\Release\rmopo.exe
 C:\Users\micha\Documents\github\rmopo\Src\rmopo\rmopo\obj\Release\rmopo.pdb
+C:\Users\micha\Documents\github\rmopo\Src\rmopo\rmopo\bin\Release\Keyboardinputs.dll
+C:\Users\micha\Documents\github\rmopo\Src\rmopo\rmopo\bin\Release\SharpDX.DirectInput.dll
+C:\Users\micha\Documents\github\rmopo\Src\rmopo\rmopo\bin\Release\SharpDX.dll
+C:\Users\micha\Documents\github\rmopo\Src\rmopo\rmopo\bin\Release\Keyboardinputs.pdb
+C:\Users\micha\Documents\github\rmopo\Src\rmopo\rmopo\obj\Release\rmopo.csproj.CopyComplete
